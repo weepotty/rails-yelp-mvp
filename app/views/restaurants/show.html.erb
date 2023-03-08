@@ -5,7 +5,9 @@
 <p><strong>Reviews</strong></p>
 <ul class="list-group">
   <% @restaurant.reviews.each do |review| %>
-    <li class="list-group-item"><%= review.content %></li>
+    <li class="list-group-item"><%= review.content %> - <%= review.rating %> stars</li>
   <% end %>
 </ul>
 <br>
+<p><strong></strong></p>
+<%= render "form_review", restaurant: @restaurant, review: @review %>

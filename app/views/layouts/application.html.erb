@@ -10,6 +10,10 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <nav class="navbar navbar-light bg-light px-4">
+      <a class="navbar-brand" href="/restaurants">Restaurants</a>
+      <a class="navbar-item" href="/restaurants/new">Add an item</a>
+    </nav>
     <%= yield %>
   </body>
 </html>

@@ -1,13 +1,24 @@
-<h1><%= @restaurant.name %></h1>
-<p>Address: <%= @restaurant.address %></p>
-<p>Tel: <%= @restaurant.phone_number %></p>
-<p>Cuisine: <%= @restaurant.category %></p>
-<p><strong>Reviews</strong></p>
-<ul class="list-group">
-  <% @restaurant.reviews.each do |review| %>
-    <li class="list-group-item"><%= review.content %> - <%= review.rating %> stars</li>
-  <% end %>
-</ul>
-<br>
-<p><strong></strong></p>
-<%= render "reviews/form", restaurant: @restaurant, review: @review %>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h1 class=card-title><%= @restaurant.name %></h1>
+      <div class="card-text">
+        <p>Address: <%= @restaurant.address %></p>
+        <p>Tel: <%= @restaurant.phone_number %></p>
+        <p>Cuisine: <%= @restaurant.category %></p>
+        <p><strong>Reviews</strong></p>
+        <ul class="list-group">
+          <% @restaurant.reviews.each do |review| %>
+            <li class="list-group-item"><%= review.content %> - <%= review.rating %> stars</li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <p><strong>Add a new review</strong></p>
+      <%= render "reviews/form", restaurant: @restaurant, review: @review %>
+    </div>
+  </div>
+</div>

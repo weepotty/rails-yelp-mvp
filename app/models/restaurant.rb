@@ -3,7 +3,7 @@ class Restaurant < ApplicationRecord
 
   validates :name, presence: true
   validates :address, presence: true
-  validates :category, inclusion: { in: %w(chinese italian japanese french belgian), message: '%{value} is not a valid category' }, allow_nil:true
+  validates :category, inclusion: { in: %w(chinese italian japanese french belgian), message: '%{value} is not a valid category' }
 end
 
 # A restaurant must have a name, an address and a category.
